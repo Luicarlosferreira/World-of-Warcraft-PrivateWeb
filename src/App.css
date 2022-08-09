@@ -1,0 +1,109 @@
+@import url("http://fonts.cdnfonts.com/css/lifecraft");
+@import url(//db.onlinewebfonts.com/c/468aae57f563fbaeeeff11ea508a8b7c?family=FuturaEF);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Rubik:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: #020b2c;
+  font-family: "FuturaEF-Book", sans-serif;
+  font-weight: 600;
+}
+
+form {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 25px;
+  width: 400px;
+  border-radius: 15px;
+  transition: all 0.2s linear;
+}
+form input {
+  padding: 8px;
+  outline: none;
+  color: red;
+  width: 100%;
+}
+
+button {
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: all 0.2s linear;
+}
+button:hover {
+  background-color: #ffffff83;
+  color: white;
+}
+.error {
+  color: rgb(21, 124, 30);
+  font-size: 1em;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 2px;
+  margin: 15px 0;
+}
+
+button[disabled] {
+  background-color: gray;
+  color: rgb(104, 13, 13);
+  cursor: wait;
+}
+
+.ModalLogin {
+  padding: 15px;
+  border-radius: 5px;
+  width: 500px;
+  top: -30%;
+  right: 10em;
+  position: absolute;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+  z-index: 90000;
+  background-color: #000000fb;
+  color: #ffc400;
+  border: 1px solid grey;
+  opacity: 1;
+  z-index: 1;
+
+  animation: modalMotion 10s 1s linear forwards;
+}
+.ModalLogin span {
+  color: white;
+}
+
+@keyframes modalMotion {
+  0% {
+    opacity: 0;
+    top: -20%;
+  }
+  25% {
+    opacity: 0.5;
+    top: -10%;
+  }
+
+  50% {
+    opacity: 1;
+    top: -5%;
+  }
+
+  100% {
+    opacity: 0;
+    top: 0;
+  }
+}

@@ -7,6 +7,7 @@ import { useAuthValue } from "../../context/AuthContext";
 
 export const Home = () => {
   const { user } = useAuthValue();
+  const { auth } = useAuthentication();
 
   return (
     <>
